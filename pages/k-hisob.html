@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Oson Hisob - paneli</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<style>
+  #grid {
+  grid-gap: 1vw;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+.el {
+  padding: 0.5rem;
+  background-color: #1d3156;
+  border: 1px darkgray solid;
+}
+.el h1{
+ font-size: initial;
+ color: white;
+ letter-spacing: 0px;
+ margin-top: 1px
+}
+.el th{
+ font-size: small;
+ text-align: center;
+ color: #797979;
+}
+.el table{
+ width: 100%;
+}
+.sp-module:first-child {
+  margin-top: 0px;
+}
+@media (max-width: 480px) {
+    br {
+        display: none;
+    }
+}
+.rate-up{
+    color: #15e215;
+	font-size: 13px;
+}
+.rate-down{
+    color: red;
+	font-size: 13px;
+}
+
+</style>
+<body>
+  <!-- ======= Header boshlanid======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="dashboard.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Oson Hisob</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- Logo tugashi -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+  
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">A. Anvarov</span>
+          </a><!--Profile Iamge Icon tugadi -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Aliakbar Anvarov</h6>
+              <span>Do'kon Direktori</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Mening akkauntim</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Yordam kerakmi?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="../index.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Hisobdan chiqish</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Kiritish Paneli</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Mahsulotlar</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="m-ro'yxat.html">
+              <i class="bi bi-circle"></i><span>Ro'yxati</span>
+            </a>
+          </li>
+          <li>
+            <a href="k-hisob.html">
+              <i class="bi bi-circle"></i><span>Kurs hisoboti</span>
+            </a>
+          </li>
+          <li>
+            <a href="m-hisob.html">
+              <i class="bi bi-circle"></i><span>Hisob-Kitobi</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav --><!-- End Mahsulotlar Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Hodimlar</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="h-ro'yxat.html">
+              <i class="bi bi-circle"></i><span>Ro'yxati</span>
+            </a>
+          </li>
+          <li>
+            <a href="h-hisob.html">
+              <i class="bi bi-circle"></i><span>Hisob-Kitobi</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="h-add.html">
+              <i class="bi bi-circle"></i><span>Qo'shish</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Hodimlar Nav -->
+
+
+      <li class="nav-heading">Qo'shimcha</li>
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="j-club.html">
+          <i class="bi bi-question-circle"></i>
+          <span>Yordam</span>
+        </a>
+      </li><!-- End Yordam Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+    <section id="sp-carrency" class="carrency"><div class="container"><div class="row"><div id="sp-user1" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+      <div id="grid">
+      <div class="el">
+        <h1>Черный рынок</h1>
+      <table>
+        <tbody><tr>
+            <th>Покупка</th>
+            <th>Продажа</th>	
+        </tr>
+        
+          
+        <tr>
+          <td>
+                  11300                    
+          </td>
+          <td>        
+                        11330                    
+          </td>
+        </tr>
+      </tbody></table>
+      </div>
+      <div class="el">
+        <h1>Банки</h1>
+        <table>
+          <tbody><tr>
+            <th>Покупка</th>
+            <th>Продажа</th>
+          </tr>
+          <tr>
+            <td>11290</td>
+            <td>11340</td>
+          </tr>
+        </tbody></table>
+      </div>
+      <div class="el">
+        <h1>ЦБ</h1>
+        <table>
+          <tbody><tr>
+            <td><br>
+            11320.00
+                  </td>
+          </tr>
+        </tbody></table>
+      </div>
+      <div class="el">
+        <h1>Биржа</h1>
+        <table>
+          <tbody><tr>
+            <td><br>
+            11320
+                  </td>
+          </tr>
+        </tbody></table>
+      </div>
+      </div>
+      
+      
+      </div></div></div></div></div></div>
+    </section>
+  </main><!-- Main tugadi -->
+
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Junior Club</span></strong>. 
+    </div>
+    <div class="credits">
+      Dizayn <a href="">JuniorCub</a>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
